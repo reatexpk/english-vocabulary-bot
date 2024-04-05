@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+install = "pipenv sync --dev"
+dev = "nodemon --exec pipenv run py src/main.py"
+start = "pipenv run py src/main.py"
+test = "echo No test found"
+lint = "flake8"
+clean = "pipenv --rm"
+
+[packages]
+requests = "*"
+aiogram = "*"
+
+[dev-packages]
+flake8 = "*"
+
+[requires]
+python_version = "3.12"
